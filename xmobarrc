@@ -11,13 +11,13 @@ Config {
                          , Run BatteryP ["BAT0"]
                                        [
                                          "-t", "<acstatus> <left>%"
-                                       , "-H", "50", "-h", "#60a0c0", "-l", "#d74b73"
+                                       , "-H", "75", "-L", "50"
+                                       , "--low", "#d74b73", "--high", "#60a0c0", "--normal", "#8e82a2"
                                        , "--", "-O", "<fc=#60a0c0>Plugged</fc> -", "-o", "<fc=#d74b73>Unplugged</fc>"
-                                       , "-l", "#d74b73", "-h", "#60a0c0", "-m", "yellow"
                                        ]
                                        100
                          ]
        , sepChar       = "%"
        , alignSep      = "}{"
-       , template      = "%StdinReader% }{ %battery% <fc=#60a0c0>|</fc> %date% <fc=#60a0c0>|</fc>"
+       , template      = "%StdinReader% }{ %battery% <fc=#60a0c0>|</fc> %date%"
        }
