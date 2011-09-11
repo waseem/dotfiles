@@ -22,7 +22,10 @@ xscreensaver -no-splash &
 xsetroot -cursor_name left_ptr
 
 # set wallpaper
-eval `cat ~/.fehbg`
+[[ -f ~/.fehbg ]] && eval `cat ~/.fehbg`
+
+# Swap caps lock with left control
+[[ -f ~/.xmodmap ]] && xmodmap ~/.xmodmap
 
 # exec gnome-session
 # exec startkde
