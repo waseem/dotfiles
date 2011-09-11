@@ -21,6 +21,9 @@ xscreensaver -no-splash &
 # set the cursor
 xsetroot -cursor_name left_ptr
 
+# set wallpaper
+eval `cat ~/.fehbg`
+
 # exec gnome-session
 # exec startkde
 # exec startxfce4
