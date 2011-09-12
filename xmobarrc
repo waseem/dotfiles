@@ -9,15 +9,10 @@ Config {
                            Run Date "%a %b %_d %Y %H:%M" "date" 10
                          , Run StdinReader
                          , Run Wireless "wlan0" [
-                                                  "-t", "<fc=#60a0c0><essid></fc>(<quality>%) -"
+                                                  "-t", "<essid>(<quality>%) -"
                                                 , "-H", "90", "-L", "70"
                                                 , "-h", "#60a0c0", "-l", "#d74b73", "-n", "#8e82a2"
                                                 ] 600
-                         , Run Network "wlan0"  [
-                                                  "-t", "<fc=#60a0c0>↑</fc> <rx>KB <fc=#60a0c0>↓</fc> <tx>KB"
-                                                , "-H", "100", "-L", "30"
-                                                , "-h", "#60a0c0", "-l", "#d74b73", "-n", "#8e82a2"
-                                                ] 10
                          , Run BatteryP         ["BAT0"]
                                                 [
                                                   "-t", "<acstatus> <left>%"
@@ -29,5 +24,5 @@ Config {
                          ]
        , sepChar       = "%"
        , alignSep      = "}{"
-       , template      = "%StdinReader% }{ %wlan0wi% %wlan0% <fc=#60a0c0>|</fc> %battery% <fc=#60a0c0>|</fc> %date%"
+       , template      = "%StdinReader% }{ %wlan0wi% <fc=#60a0c0>|</fc> %battery% <fc=#60a0c0>|</fc> %date%"
        }
