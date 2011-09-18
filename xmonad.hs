@@ -20,13 +20,14 @@ main = do
       borderWidth        = 2
     , normalBorderColor  = colorGrey
     , focusedBorderColor = colorBlue
+    , terminal           = "terminal"
     , manageHook         = manageDocks <+> myManageHook
                                        <+> manageHook defaultConfig
     , layoutHook         = avoidStruts  $ layoutHook defaultConfig
     , logHook            = dynamicLogWithPP xmobarPP
                              {
                                ppOutput      = hPutStrLn xmproc
-                             , ppTitle       = xmobarColor "grey" "" . shorten 50
+                             , ppTitle       = xmobarColor "grey" "" . shorten 32
                              }
     } `additionalKeys`
     [

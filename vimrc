@@ -12,6 +12,8 @@ set cindent
 set expandtab
 set tabstop=2
 set term=xterm-256color
+set laststatus=2
+set statusline=%<%f\ %h%m%r%y%=%-14.(%l,%c%V%)\ %P
 
 filetype plugin indent on
 filetype plugin on

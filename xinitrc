@@ -27,6 +27,10 @@ xsetroot -cursor_name left_ptr
 # Swap caps lock with left control
 [[ -f ~/.xmodmap ]] && xmodmap ~/.xmodmap
 
+# Use more fonts
+xset +fp /usr/share/fonts/local
+xset fp rehash
+
 # exec gnome-session
 # exec startkde
 # exec startxfce4
