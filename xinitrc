@@ -31,6 +31,9 @@ xsetroot -cursor_name left_ptr
 xset +fp /usr/share/fonts/local
 xset fp rehash
 
+# Start dropbox in background
+dropboxd &
+
 # exec gnome-session
 # exec startkde
 # exec startxfce4
