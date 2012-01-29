@@ -68,7 +68,7 @@ if $COLORTERM == 'gnome-terminal'
   set term=gnome-256color
   colorscheme railscasts
 else
-  colorscheme slate
+  colorscheme darkblue
 endif
 
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
