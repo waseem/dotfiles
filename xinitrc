@@ -32,7 +32,7 @@ xset +fp /usr/share/fonts/local
 xset fp rehash
 
 # Start dropbox in background
-dropboxd &
+#dropboxd &
 
 # exec gnome-session
 # exec startkde
