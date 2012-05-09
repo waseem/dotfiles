@@ -31,6 +31,9 @@ xsetroot -cursor_name left_ptr
 xset +fp /usr/share/fonts/local
 xset fp rehash
 
+# Shut up systep beep: xset b to renable
+xset -b
+
 # Start dropbox in background
 #dropboxd &
 
