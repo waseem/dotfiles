@@ -1,0 +1,17 @@
+[user]
+	name = Waseem Ahmad
+	email = talk.to.waseem@gmail.com
+[core]
+	excludesfile = ~/.gitignore
+	editor = vim
+	whitespace = -trailing-space
+[alias]
+	ci = commit -v
+	st = status --short
+[color]
+	branch = auto
+	diff = auto
+	grep = auto
+	interactive = auto
+	status = auto
+	ui = auto
