@@ -46,7 +46,7 @@ colorRed     = "#d74b73"
 colorMagenta = "#8e82a2"
 
 -- Dmenu
-myDmenu = "dmenu_run -b -l 3 -p 'run' -nb '" ++ colorBlack ++ "' -nf '" ++ colorBlue ++ "' -sb '" ++ colorBlueAlt ++ "'"
+myDmenu = "dmenu_run -b -nb '" ++ colorBlack ++ "' -nf '" ++ colorBlue ++ "' -sb '" ++ colorBlueAlt ++ "'"
 
 -- Manage floating windows
 myManageHook = composeAll [
