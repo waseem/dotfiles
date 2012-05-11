@@ -17,7 +17,7 @@ main = do
   xmproc <- spawnPipe "xmobar"
   xmonad $ defaultConfig
     {
-      borderWidth        = 2
+      borderWidth        = 1
     , normalBorderColor  = colorGrey
     , focusedBorderColor = colorBlue
     , terminal           = "uxterm"
