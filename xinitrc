@@ -24,9 +24,6 @@ xsetroot -cursor_name left_ptr
 # set wallpaper
 [[ -f ~/.fehbg ]] && eval `cat ~/.fehbg`
 
-# Swap caps lock with left control
-[[ -f ~/.xmodmap ]] && xmodmap ~/.xmodmap
-
 # Use more fonts
 xset +fp /usr/share/fonts/local
 xset fp rehash
