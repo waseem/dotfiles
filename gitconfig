@@ -8,6 +8,7 @@
 [alias]
 	ci = commit -v
 	st = status --short
+	co = checkout
 [color]
 	branch = auto
 	diff = auto
@@ -15,3 +16,5 @@
 	interactive = auto
 	status = auto
 	ui = auto
+[color "diff"]
+	new = blue bold

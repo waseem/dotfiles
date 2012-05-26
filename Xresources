@@ -44,7 +44,6 @@ UXTerm*on5Clicks:          page
 UXTerm*eightBitInput:      true
 
 ! Scroll
-UXTerm*multiScroll:        true
 UXTerm*saveLines:          8192
 UXTerm*scrollKey:          true
 UXTerm*scrollTtyOutput:    false
