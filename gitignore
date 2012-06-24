@@ -1,3 +1,6 @@
 *.vim
 tags
 *.swp
+.rvmrc
+db/schema.rb
+.bundle
