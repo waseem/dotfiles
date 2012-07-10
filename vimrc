@@ -29,8 +29,12 @@ noremap <Space> <PageDown>
 noremap <BS> <PageUP> 
 
 " Change tabs just like browsing the web
-nnoremap <C-Tab> <C-PageDown>
-nnoremap <C-S-Tab> <C-PageUp>
+nmap <C-Tab>     :tabnext<CR>
+nmap <C-S-Tab>   :tabprevious<CR>
+map  <C-Tab>     :tabnext<CR>
+map  <C-S-Tab>   :tabprevious<CR>
+imap <C-Tab>     <ESC>:tabnext<CR>i
+imap <C-S-Tab>   <ESC>:tabprevious<CR>i
 
 " Since h is not use as in h j k l movement, use h as b.
 noremap h b
