@@ -9,6 +9,8 @@
 	ci = commit -v
 	st = status --short
 	co = checkout
+  df = difftool -y --tool=gvimdiff -U99999
+  who = shortlog -s -n
 [color]
 	branch = auto
 	diff = auto
