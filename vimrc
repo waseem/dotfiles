@@ -80,3 +80,4 @@ else
 endif
 
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+au BufRead,BufNewFile *.hamlc set ft=haml
