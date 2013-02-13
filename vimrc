@@ -14,6 +14,7 @@ set tabstop=2
 set term=xterm-256color
 set laststatus=2
 set statusline=%<%f\ %h%m%r%y%=%-14.(%l,%c%V%)\ %P
+set wildmenu
 
 filetype plugin indent on
 filetype plugin on
@@ -82,3 +83,4 @@ endif
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 au BufRead,BufNewFile *.hamlc set ft=haml
 au BufRead,BufNewFile *.god set ft=ruby
+au BufRead,BufNewFile Guardfile set ft=ruby
