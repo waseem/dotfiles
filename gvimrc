@@ -9,3 +9,7 @@ set guifont=Terminus\ 10
 " Wrap long lines
 "
 set wrap linebreak nolist showbreak=↪
+
+if &diff
+  colorscheme slate
+endif

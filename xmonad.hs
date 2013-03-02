@@ -20,7 +20,7 @@ main = do
       borderWidth        = 1
     , normalBorderColor  = colorGrey
     , focusedBorderColor = colorBlue
-    , terminal           = "uxterm"
+    , terminal           = "gnome-terminal"
     , manageHook         = manageDocks <+> myManageHook
                                        <+> manageHook defaultConfig
     , layoutHook         = avoidStruts  $ layoutHook defaultConfig
@@ -33,7 +33,7 @@ main = do
     } `additionalKeys`
     [
       ((mod1Mask .|. shiftMask, xK_l), spawn "xscreensaver-command -lock") -- Lock screen
-    , ((mod1Mask .|. shiftMask, xK_Return), spawn "uxterm") -- Make terminal use a login shell
+    , ((mod1Mask .|. shiftMask, xK_Return), spawn "gnome-terminal") -- Make terminal use a login shell
     , ((mod1Mask, xK_p),               spawn myDmenu)
     , ((0, xK_Print),                  spawn "scrot") -- Screengrab of whole desktop. Saved to ~/
     ]

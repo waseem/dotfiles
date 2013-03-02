@@ -1,4 +1,4 @@
-alias fgr="grep -REIn $*"
+alias fgr="grep -REIn --color=auto $*"
 alias cal="cal -3m $*"
 alias ls='ls --color=auto'
 alias svndiff="svn diff | colordiff"
