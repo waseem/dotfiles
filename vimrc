@@ -29,6 +29,10 @@ map n :tabnew
 noremap <Space> <PageDown>
 noremap <BS> <PageUP> 
 
+" Move tabs with  Ctrl+h|l
+nnoremap <silent> <C-h> :execute 'silent! tabmove ' . (tabpagenr() - 2)<CR>
+nnoremap <silent> <C-l> :execute 'silent! tabmove ' . tabpagenr()<CR>
+
 " Change tabs just like browsing the web
 nmap <C-Tab>     :tabnext<CR>
 nmap <C-S-Tab>   :tabprevious<CR>

@@ -19,4 +19,4 @@
 	status = auto
 	ui = auto
 [color "diff"]
-	new = blue bold
+	new = green bold
