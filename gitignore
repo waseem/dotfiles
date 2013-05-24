@@ -2,5 +2,7 @@
 tags
 *.swp
 .rvmrc
+.ruby-version
 db/schema.rb
 .bundle
+gtags.sh

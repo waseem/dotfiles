@@ -28,7 +28,7 @@ main = do
                              {
                                ppOutput      = hPutStrLn xmproc
                              , ppCurrent     = xmobarColor colorBlue "" . wrap "[" "]"
-                             , ppTitle       = xmobarColor "grey" "" . shorten 32
+                             , ppTitle       = xmobarColor "grey" "" . shorten 128
                              }
     } `additionalKeys`
     [
