@@ -20,3 +20,5 @@
 	ui = auto
 [color "diff"]
 	new = green bold
+[tig]
+	diff-context = 1000
