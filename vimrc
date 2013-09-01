@@ -15,6 +15,7 @@ set term=xterm-256color
 set laststatus=2
 set statusline=%<%f\ %h%m%r%y%=%-14.(%l,%c%V%)\ %P
 set wildmenu
+set relativenumber
 
 filetype plugin indent on
 filetype plugin on

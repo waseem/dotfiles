@@ -8,7 +8,7 @@ Config {
        , commands      = [
                            Run Date "%a %b %_d %Y %H:%M" "date" 10
                          , Run StdinReader
-                         , Run Wireless "wlan0" [
+                         , Run Wireless "wlp3s0" [
                                                   "-t", "<essid>(<quality>%) -"
                                                 , "-H", "90", "-L", "70"
                                                 , "-h", "#60a0c0", "-l", "#d74b73", "-n", "#8e82a2"
@@ -24,5 +24,5 @@ Config {
                          ]
        , sepChar       = "%"
        , alignSep      = "}{"
-       , template      = "%StdinReader% }{ %wlan0wi% <fc=#60a0c0>|</fc> %battery% <fc=#60a0c0>|</fc> %date%"
+       , template      = "%StdinReader% }{ %wlp3s0wi% <fc=#60a0c0>|</fc> %battery% <fc=#60a0c0>|</fc> %date%"
        }

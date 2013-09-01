@@ -22,3 +22,5 @@
 	new = green bold
 [tig]
 	diff-context = 1000
+[merge]
+	tool = gvimdiff
