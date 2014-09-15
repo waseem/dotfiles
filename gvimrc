@@ -3,7 +3,11 @@ set go-=r " Remove right scroll bar
 set go-=T " Remove toolbar
 set go-=m " Remote menu bar
 
-set guifont=Terminus\ 10
+if has("gui_macvim")
+  set guifont=Menlo:h14
+else
+  set guifont=Terminus\ 10
+endif
 
 "
 " Wrap long lines
