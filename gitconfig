@@ -6,7 +6,7 @@
 	editor = vim
 	whitespace = -trailing-space
 [alias]
-	ci = commit -v
+	ci = commit -vs
 	st = status --short
 	co = checkout
   df = difftool -y --tool=gvimdiff -U99999
