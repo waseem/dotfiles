@@ -19,13 +19,11 @@
     ],
 
     "mod1": [
-        "option",
-        "shift"
+        "option"
     ],
     "mod2": [
         "option",
-        "shift",
-        "control"
+        "shift"
     ],
 
     "COMMANDS": "----------------------",
