@@ -11,6 +11,8 @@
 	co = checkout
   df = difftool -y --tool=gvimdiff -U99999
   who = shortlog -s -n
+  r   = rebase
+  ri  = rebase -i
 [color]
 	branch = auto
 	diff = auto
