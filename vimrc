@@ -42,6 +42,17 @@ map  <C-S-Tab>   :tabprevious<CR>
 imap <C-Tab>     <ESC>:tabnext<CR>i
 imap <C-S-Tab>   <ESC>:tabprevious<CR>i
 
+" Have focus on the left tab after tabclose
+" http://vim.wikia.com/wiki/Have_focus_on_left_tab_after_tabclose
+function! CloseSomething()
+  if winnr("$") == 1 && tabpagenr("$") > 1 && tabpagenr() > 1 && tabpagenr() < tabpagenr("$")
+    tabclose | tabprev
+  else
+    q
+  endif
+endfunction
+map <C-q> :call CloseSomething()<CR>
+
 " Since h is not use as in h j k l movement, use h as b.
 noremap h b
 
@@ -89,3 +100,4 @@ au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 au BufRead,BufNewFile *.hamlc set ft=haml
 au BufRead,BufNewFile *.god set ft=ruby
 au BufRead,BufNewFile Guardfile set ft=ruby
+au BufRead,BufNewFile Vagrantfile set ft=ruby

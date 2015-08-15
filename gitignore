@@ -6,3 +6,5 @@ tags
 db/schema.rb
 .bundle
 gtags.sh
+config/settings/hosts/waseem.yml
+config/settings/hosts/goodlove.yml
