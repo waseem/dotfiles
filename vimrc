@@ -16,6 +16,7 @@ set laststatus=2
 set statusline=%<%f\ %h%m%r%y%=%-14.(%l,%c%V%)\ %P
 set wildmenu
 set wrapscan
+set cursorline " highlight current line
 
 filetype plugin indent on
 filetype plugin on
@@ -96,8 +97,10 @@ else
   colorscheme railscasts
 endif
 
+au BufRead,BufNewFile *.iex set ft=elixir
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 au BufRead,BufNewFile *.hamlc set ft=haml
 au BufRead,BufNewFile *.god set ft=ruby
+au BufRead,BufNewFile *.as set ft=actionscript
 au BufRead,BufNewFile Guardfile set ft=ruby
 au BufRead,BufNewFile Vagrantfile set ft=ruby

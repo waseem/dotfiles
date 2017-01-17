@@ -6,7 +6,7 @@ set go-=m " Remote menu bar
 if has("gui_macvim")
   set guifont=Menlo:h14
 else
-  set guifont=Terminus\ 10
+  set guifont=xos4\ Terminus\ 10
 endif
 
 "
