@@ -10,10 +10,10 @@ if [$? -eq 0]; then
 
   if [$? -ne 0]; then
     # Something went wrong. Autoconfigure the internal monitor and disable the external one
-    xrandr --output LVDS1 --mode auto --output VGA1 --off
+    xrandr --output LVDS1 --auto --output VGA1 --off
   fi
 
 else
   # External monitor is not connected
-  xrandr --output LVDS1 --mode auto --output VGA1 --off
+  xrandr --output LVDS1 --auto --output VGA1 --off
 fi

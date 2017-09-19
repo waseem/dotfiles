@@ -97,6 +97,10 @@ else
   colorscheme railscasts
 endif
 
+" Open a Golang definition in a new tab by default using gd.
+" C-] still opens in same tab.
+let g:godef_split=2
+
 au BufRead,BufNewFile *.iex set ft=elixir
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 au BufRead,BufNewFile *.hamlc set ft=haml

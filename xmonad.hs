@@ -15,15 +15,16 @@ import System.IO
 
 main = do
   xmproc <- spawnPipe "xmobar"
-  xmonad $ defaultConfig
+  xmonad $ def
     {
       borderWidth        = 1
     , normalBorderColor  = colorGrey
     , focusedBorderColor = colorBlue
     , terminal           = "gnome-terminal"
     , manageHook         = manageDocks <+> myManageHook
-                                       <+> manageHook defaultConfig
-    , layoutHook         = avoidStruts  $ layoutHook defaultConfig
+                                       <+> manageHook def
+    , layoutHook         = avoidStruts  $ layoutHook def
+    , handleEventHook    = handleEventHook def <+> docksEventHook
     , logHook            = dynamicLogWithPP xmobarPP
                              {
                                ppOutput      = hPutStrLn xmproc

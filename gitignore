@@ -8,3 +8,5 @@ db/schema.rb
 gtags.sh
 config/settings/hosts/waseem.yml
 config/settings/hosts/goodlove.yml
+
+.envrc
