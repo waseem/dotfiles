@@ -17,6 +17,8 @@ set statusline=%<%f\ %h%m%r%y%=%-14.(%l,%c%V%)\ %P
 set wildmenu
 set wrapscan
 set cursorline " highlight current line
+set undofile
+set undodir=~/.vim/undodir
 
 filetype plugin indent on
 filetype plugin on
@@ -38,6 +40,7 @@ nnoremap <silent> <C-l> :execute 'silent! tabmove ' . tabpagenr()<CR>
 " Change tabs just like browsing the web
 nmap <C-Tab>     :tabnext<CR>
 nmap <C-S-Tab>   :tabprevious<CR>
+nmap <C-n>       :nohl<CR>
 map  <C-Tab>     :tabnext<CR>
 map  <C-S-Tab>   :tabprevious<CR>
 imap <C-Tab>     <ESC>:tabnext<CR>i
