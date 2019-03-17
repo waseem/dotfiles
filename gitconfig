@@ -13,6 +13,7 @@
   who = shortlog -s -n
   r   = rebase
   ri  = rebase -i
+  track  = checkout --track
 [color]
 	branch = auto
 	diff = auto
