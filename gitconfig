@@ -5,6 +5,7 @@
 	excludesfile = ~/.gitignore
 	editor = vim
 	whitespace = -trailing-space
+	autocrlf = input
 [alias]
 	ci = commit -v
 	st = status --short

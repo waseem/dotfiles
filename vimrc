@@ -55,7 +55,7 @@ function! CloseSomething()
     q
   endif
 endfunction
-map <C-q> :call CloseSomething()<CR>
+map <C-w> :call CloseSomething()<CR>
 
 " Since h is not use as in h j k l movement, use h as b.
 noremap h b

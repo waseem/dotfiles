@@ -1,1 +1,2 @@
 --smart-case
+--ignore-file=is:package-lock.json
