@@ -15,6 +15,8 @@ PS1='\e[1;35m\u@\h\e[m: \e[1;34m\w\e[m\e[0;32m$(__git_ps1)\e[m:\n\$ '
 [[ -f /usr/share/nvm/init-nvm.sh ]] && . /usr/share/nvm/init-nvm.sh
 [[ -f /etc/profile.d/autojump.bash ]] && . /etc/profile.d/autojump.bash
 
+# Ignore duplicate commands from bash history
+export HISTCONTROL=ignoredups
 # Load correct version of python
 eval "$(pyenv init -)"
 

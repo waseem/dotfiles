@@ -1,0 +1,148 @@
+"
+" waseem's ~/.config/nvim/init.vim
+"
+set nocompatible    " disable compatibility with old-time vi
+set showmatch       " show matching brackets
+set number          " show line numbers
+set autoindent      " indent next line the same amount as the previous
+set shiftwidth=2    " width of autoindents
+set expandtab       " converts tabs to white space
+set tabstop=2       " number of columns occupied by each tab
+set softtabstop=2   " see multiple spaces as tabstops so <BS> does right thing
+set mouse-=a         " middle-click paste with mouse
+
+set wildmode=longest,list " get bash like tab completions
+
+" search settings
+set ignorecase      " case insensitive matching
+set smartcase
+set incsearch
+set hlsearch
+
+filetype plugin indent on
+filetype plugin on
+filetype indent on
+filetype on
+sy on
+
+" Easily open a new tab. This means we will use N to reverse search.
+map n :tabnew
+
+" Page Up Page Down just like surfing the net.
+noremap <Space> <PageDown>
+noremap <BS> <PageUP>
+
+" Move tabs with  Ctrl+h|l
+nnoremap <silent> <C-h> :execute 'silent! tabmove ' . (tabpagenr() - 2)<CR>
+nnoremap <silent> <C-l> :execute 'silent! tabmove ' . tabpagenr()<CR>
+
+" Change tabs just like browsing the web
+" Find out why C-S-Tab does not work
+" nmap <C-Tab>     :tabnext<CR>
+" nmap <C-S-Tab>   :tabprevious<CR>
+" map  <C-Tab>     :tabnext<CR>
+" map  <C-S-Tab>   :tabprevious<CR>
+" imap <C-Tab>     <ESC>:tabnext<CR>i
+" imap <C-S-Tab>   <ESC>:tabprevious<CR>i
+nmap <C-;>    :tabnext<CR>
+nmap <C-j>    :tabprevious<CR>
+map  <C-;>    :tabnext<CR>
+map  <C-j>    :tabprevious<CR>
+imap <C-;>    <ESC>:tabnext<CR>i
+imap <C-j>    <ESC>:tabprevious<CR>i
+
+" Remove search higlight
+nmap <C-n>       :nohl<CR>
+
+" Since h is not use as in h j k l movement, use h as b.
+noremap h b
+
+" ^ is quite far to reach.
+noremap b ^
+
+" Use j k l ; for cursor movement. The fingers are in touch typing position.
+nnoremap j h
+nnoremap k j
+nnoremap l k
+nnoremap ; l
+
+" Easy Escape
+imap j; <Esc>
+
+" Fold settings
+set foldmethod=indent  "fold based on indent
+set foldnestmax=10     "deepest fold is 10 levels
+set nofoldenable       "dont fold by default
+set foldlevel=1        "this is just what i use
+
+" Copy paste sensibly https://www.reddit.com/r/neovim/comments/3fricd/easiest_way_to_copy_from_neovim_to_system/ctrru3b
+" " Copy to clipboard
+vnoremap <leader>y  "+y
+nnoremap <leader>Y  "+yg_
+nnoremap <leader>y  "+y
+nnoremap <leader>yy "+yy
+
+" " Paste from clipboard
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P
+
+" When reach end of line, keep moving the cursor.
+set whichwrap=h,l,~,[,]
+
+" Have focus on the left tab after tabclose
+" http://vim.wikia.com/wiki/Have_focus_on_left_tab_after_tabclose
+function! CloseSomething()
+  if winnr("$") == 1 && tabpagenr("$") > 1 && tabpagenr() > 1 && tabpagenr() < tabpagenr("$")
+    tabclose | tabprev
+  else
+    q
+  endif
+endfunction
+map <C-w> :call CloseSomething()<CR>
+
+set list listchars=tab:\➜\ ,trail:·,nbsp:-
+
+" Wrap long lines
+set wrap linebreak nolist showbreak=↪
+
+call plug#begin()
+Plug 'vim-scripts/railscasts'
+Plug 'preservim/nerdcommenter'
+Plug 'sheerun/vim-polyglot'
+Plug 'vim-airline/vim-airline'
+Plug 'junegunn/fzf'
+Plug 'dense-analysis/ale'
+Plug 'ryanoasis/vim-devicons'
+call plug#end()
+
+colorscheme railscasts
+set guifont=Iosevka:h16
+set updatetime=100    " Delay before gitgutter shows diff signs
+
+" fzf find files
+nnoremap <C-p> :FZF<CR>
+
+" Keybindings for ALE eslint-navigation. Always start from top of the file
+" <leader>p is already occupied by copy pasting
+nnoremap <leader>n :lnext<CR>
+
+" Automatically fix eslint/prettier errors on save
+"let g:ale_fixers = ['prettier', 'eslint']
+"let g:ale_fix_on_save = 1
+
+" Use airline for tabline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+" use ripgrep for fzf https://github.com/junegunn/fzf.vim/issues/121#issuecomment-546360911
+let $FZF_DEFAULT_COMMAND='rg --files --hidden'
+
+" Source gnvim here
+if exists('g:gnvim')
+  set cursorline      " highlight current line
+endif
+
+" Load files if changed by an external command https://github.com/neovim/neovim/issues/1936
+au FocusGained * :checktime

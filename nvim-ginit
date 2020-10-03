@@ -1,0 +1,4 @@
+"
+" waseem's ~/.config/nvim/ginit.vim
+"
+set cursorline      " highlight current line
