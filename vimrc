@@ -2,21 +2,16 @@
 " waseem's ~/.vimrc
 "
 
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-
 set number
 set autoindent
 set shiftwidth=2
-set cindent
 set expandtab
 set tabstop=2
 set term=xterm-256color
 set laststatus=2
-set statusline=%<%f\ %h%m%r%y%=%-14.(%l,%c%V%)\ %P
+"set statusline=%<%f\ %h%m%r%y%=%-14.(%l,%c%V%)\ %P
 set wildmenu
 set wrapscan
-set cursorline " highlight current line
 set undofile
 set undodir=~/.vim/undodir
 
@@ -31,7 +26,7 @@ map n :tabnew
 
 " Page Up Page Down just like surfing the net.
 noremap <Space> <PageDown>
-noremap <BS> <PageUP> 
+noremap <BS> <PageUP>
 
 " Move tabs with  Ctrl+h|l
 nnoremap <silent> <C-h> :execute 'silent! tabmove ' . (tabpagenr() - 2)<CR>
@@ -87,11 +82,39 @@ set foldnestmax=10     "deepest fold is 10 levels
 set nofoldenable       "dont fold by default
 set foldlevel=1        "this is just what i use
 
+" Copy paste sensibly https://www.reddit.com/r/neovim/comments/3fricd/easiest_way_to_copy_from_neovim_to_system/ctrru3b
+" " Copy to clipboard
+vnoremap <leader>y  "+y
+nnoremap <leader>Y  "+yg_
+nnoremap <leader>y  "+y
+nnoremap <leader>yy "+yy
+
+" " Paste from clipboard
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P
+
+" search settings
 set ignorecase
 set smartcase
 set incsearch
 set hlsearch
 set list listchars=tab:\➜\ ,trail:·,nbsp:-
+"
+" Wrap long lines
+"
+set wrap linebreak nolist showbreak=↪
+
+call plug#begin()
+Plug 'vim-scripts/railscasts'
+Plug 'preservim/nerdcommenter'
+Plug 'sheerun/vim-polyglot'
+Plug 'vim-airline/vim-airline'
+Plug 'junegunn/fzf'
+Plug 'dense-analysis/ale'
+"Plug 'ryanoasis/vim-devicons'
+call plug#end()
 
 if $COLORTERM == 'gnome-terminal'
   set term=gnome-256color
@@ -100,14 +123,35 @@ else
   colorscheme railscasts
 endif
 
+set updatetime=100    " Delay before gitgutter shows diff signs
+
+" fzf find files
+nnoremap <C-p> :FZF<CR>
+
+" Keybindings for ALE eslint-navigation. Always start from top of the file
+" <leader>p is already occupied by copy pasting
+nnoremap <leader>n :lnext<CR>
+
+" Automatically fix eslint/prettier errors on save
+let g:ale_fixers = ['prettier', 'eslint']
+let g:ale_fix_on_save = 1
+
+" Use airline for tabline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+" use ripgrep for fzf https://github.com/junegunn/fzf.vim/issues/121#issuecomment-546360911
+let $FZF_DEFAULT_COMMAND='rg --files --hidden'
+
+
 " Open a Golang definition in a new tab by default using gd.
 " C-] still opens in same tab.
-let g:godef_split=2
+"let g:godef_split=2
 
-au BufRead,BufNewFile *.iex set ft=elixir
-au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
-au BufRead,BufNewFile *.hamlc set ft=haml
-au BufRead,BufNewFile *.god set ft=ruby
-au BufRead,BufNewFile *.as set ft=actionscript
-au BufRead,BufNewFile Guardfile set ft=ruby
-au BufRead,BufNewFile Vagrantfile set ft=ruby
+"au BufRead,BufNewFile *.iex set ft=elixir
+"au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+"au BufRead,BufNewFile *.hamlc set ft=haml
+"au BufRead,BufNewFile *.god set ft=ruby
+"au BufRead,BufNewFile *.as set ft=actionscript
+"au BufRead,BufNewFile Guardfile set ft=ruby
+"au BufRead,BufNewFile Vagrantfile set ft=ruby

@@ -129,8 +129,8 @@ nnoremap <C-p> :FZF<CR>
 nnoremap <leader>n :lnext<CR>
 
 " Automatically fix eslint/prettier errors on save
-"let g:ale_fixers = ['prettier', 'eslint']
-"let g:ale_fix_on_save = 1
+let g:ale_fixers = ['prettier', 'eslint']
+let g:ale_fix_on_save = 1
 
 " Use airline for tabline
 let g:airline#extensions#tabline#enabled = 1
