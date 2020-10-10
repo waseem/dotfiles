@@ -9,7 +9,7 @@ if has("gui_macvim")
 else
   set guifont=Iosevka\ 12
   "set guifont=Monospace\ Regular\ 12
-  "set guifont=Terminus
+  "set guifont="xos4\ Terminus"\ 12
 endif
 
 if &diff

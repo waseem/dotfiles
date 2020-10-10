@@ -2,8 +2,8 @@
 # https://github.com/mattjj/my-oh-my-zsh/blob/master/history.zsh
 
 HISTFILE="$HOME/.histfile"
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=100000
+SAVEHIST=100000
 
 setopt BANG_HIST                 # Treat the '!' character specially during expansion.
 setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
@@ -90,7 +90,7 @@ export UPDATE_ZSH_DAYS=60
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages direnv pyenv nvm)
+plugins=(git colored-man-pages direnv pyenv nvm heroku)
 
 # Default OMZ chruby plugin shows ruby version in prompt. I don't like that.
 [[ -f /usr/share/chruby/chruby.sh ]] && . /usr/share/chruby/chruby.sh

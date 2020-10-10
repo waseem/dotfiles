@@ -14,6 +14,8 @@ set wildmenu
 set wrapscan
 set undofile
 set undodir=~/.vim/undodir
+set splitbelow
+set splitright
 
 filetype plugin indent on
 filetype plugin on
@@ -50,7 +52,7 @@ function! CloseSomething()
     q
   endif
 endfunction
-map <C-w> :call CloseSomething()<CR>
+map <C-q> :call CloseSomething()<CR>
 
 " Since h is not use as in h j k l movement, use h as b.
 noremap h b
@@ -112,6 +114,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'
 Plug 'junegunn/fzf'
+Plug 'junegunn/vim-easy-align'
 Plug 'dense-analysis/ale'
 "Plug 'ryanoasis/vim-devicons'
 call plug#end()
@@ -139,9 +142,14 @@ let g:ale_fix_on_save = 1
 " Use airline for tabline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#show_tab_count = 0
+let g:airline#extensions#tabline#show_buffers = 0
 
 " use ripgrep for fzf https://github.com/junegunn/fzf.vim/issues/121#issuecomment-546360911
 let $FZF_DEFAULT_COMMAND='rg --files --hidden'
+
+" Easy align tables
+vmap <leader><Bar> :EasyAlign*<Bar><CR>
 
 
 " Open a Golang definition in a new tab by default using gd.

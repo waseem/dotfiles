@@ -28,3 +28,7 @@
 	diff-context = 1000
 [merge]
 	tool = gvimdiff
+[pager]
+	branch = false
+[pull]
+	rebase = true
