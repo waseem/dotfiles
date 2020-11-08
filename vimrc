@@ -116,7 +116,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'junegunn/fzf'
 Plug 'junegunn/vim-easy-align'
 Plug 'dense-analysis/ale'
-"Plug 'ryanoasis/vim-devicons'
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+"Plug 'ryanoasis/vim-devicons' "should be last
 call plug#end()
 
 if $COLORTERM == 'gnome-terminal'
@@ -145,12 +147,17 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#tabline#show_tab_count = 0
 let g:airline#extensions#tabline#show_buffers = 0
 
+" Align comment character to the left
+let g:NERDDefaultAlign = 'left'
+
 " use ripgrep for fzf https://github.com/junegunn/fzf.vim/issues/121#issuecomment-546360911
 let $FZF_DEFAULT_COMMAND='rg --files --hidden'
 
+" Do not open nerdtree on Gvim open
+let g:nerdtree_tabs_open_on_gui_startup = 0
+
 " Easy align tables
 vmap <leader><Bar> :EasyAlign*<Bar><CR>
-
 
 " Open a Golang definition in a new tab by default using gd.
 " C-] still opens in same tab.

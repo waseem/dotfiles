@@ -1,2 +1,4 @@
 --smart-case
 --ignore-file=is:package-lock.json
+--ignore-directory=.next
+--ignore-directory=coverage
