@@ -2,7 +2,7 @@
 
      Awesome WM configuration template
      github.com/lcpz
-
+     https://github.com/lcpz/awesome-copycats#usage
 --]]
 
 -- {{{ Required libraries
@@ -72,7 +72,6 @@ awful.spawn.with_shell(
 -- }}}
 
 -- {{{ Variable definitions
-
 local themes = {
     "blackburn",       -- 1
     "copland",         -- 2
@@ -106,6 +105,7 @@ awful.layout.layouts = {
     awful.layout.suit.floating,
     awful.layout.suit.tile.left,
     awful.layout.suit.fair,
+    awful.layout.suit.fair.horizontal,
 
     --awful.layout.suit.floating,
     --awful.layout.suit.tile,
@@ -194,7 +194,7 @@ lain.layout.cascade.tile.extra_padding = dpi(5)
 lain.layout.cascade.tile.nmaster       = 5
 lain.layout.cascade.tile.ncol          = 2
 
-beautiful.init(string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), chosen_theme))
+beautiful.init(string.format("%s/.config/awesome/themes/%s/theme-personal.lua", os.getenv("HOME"), chosen_theme))
 -- }}}
 
 -- {{{ Menu
@@ -697,7 +697,7 @@ awful.rules.rules = {
 
     -- Titlebars
     { rule_any = { type = { "dialog", "normal" } },
-      properties = { titlebars_enabled = true } },
+      properties = { titlebars_enabled = false } },
 
     -- Set Firefox to always map on the first tag on screen 1.
     { rule = { class = "Firefox" },

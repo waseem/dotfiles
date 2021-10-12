@@ -118,6 +118,8 @@ Plug 'junegunn/vim-easy-align'
 Plug 'dense-analysis/ale'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'delphinus/vim-firestore'
+Plug 'tpope/vim-rails'
 "Plug 'ryanoasis/vim-devicons' "should be last
 call plug#end()
 

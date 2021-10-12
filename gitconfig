@@ -15,6 +15,7 @@
   r   = rebase
   ri  = rebase -i
   track  = checkout --track
+	ahead-by = rev-list --count master..HEAD
 [color]
 	branch = auto
 	diff = auto
@@ -30,5 +31,7 @@
 	tool = gvimdiff
 [pager]
 	branch = false
+	stash = false
+	who = false
 [pull]
 	rebase = true
