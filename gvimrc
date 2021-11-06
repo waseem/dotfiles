@@ -5,7 +5,8 @@ set go-=m " Remove menu bar
 set cursorline " highlight current line
 
 if has("gui_macvim")
-  set guifont=Menlo:h14
+  "set guifont=Menlo:h14
+  set guifont=Terminus\ \(TTF\):h16
 else
   "set guifont=Iosevka\ 12
   "set guifont=Monospace\ Regular\ 12

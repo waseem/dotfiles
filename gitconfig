@@ -1,11 +1,13 @@
 [user]
 	name = Waseem Ahmad
-	email = talk.to.waseem@gmail.com
+	email = waseem.ahmad@shopify.com
+	signingkey = 55F3EEA5E552FA649F636C5BF085D21E81639270
 [core]
 	excludesfile = ~/.gitignore
 	editor = vim
 	whitespace = -trailing-space
 	autocrlf = input
+	commitGraph = true
 [alias]
 	ci = commit -v
 	st = status --short
@@ -35,3 +37,21 @@
 	who = false
 [pull]
 	rebase = true
+[credential]
+	helper = 
+	helper = store --file /opt/dev/var/private/git_credential_store
+[diff]
+	algorithm = patience
+[gc]
+	writeCommitGraph = true
+[protocol]
+	version = 2
+[url "https://github.com/Shopify/"]
+	insteadOf = git@github.com:Shopify/
+	insteadOf = git@github.com:shopify/
+	insteadOf = ssh://git@github.com/Shopify/
+	insteadOf = ssh://git@github.com/shopify/
+[gpg]
+	program = /nix/var/nix/gcroots/dev-profiles/dev-support-dev-profile/bin/gpg-auto-pin
+[commit]
+	gpgSign = true
