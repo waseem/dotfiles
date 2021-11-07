@@ -8,6 +8,7 @@ xdg_config="$HOME/.config"
 declare -a packages=(
   "ack"
   "ripgrep"
+  "tig"
 )
 
 declare -a dotfiles=(
