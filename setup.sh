@@ -54,6 +54,7 @@ if [ $SPIN ]; then
   for dotfile in "${dotfiles[@]}"; do
     link_file "$dotfile" "$HOME/.$dotfile"
   done
+  link_file "vimrc-minimal" "$HOME/.vimrc"
 
   # Copying gitconfig because commands below will modify ~/dotfiles/gitconfig
   cp "$link_source/gitconfig" "$HOME/.gitconfig"
