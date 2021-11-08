@@ -44,11 +44,11 @@ nnoremap <silent> <C-l> :execute 'silent! tabmove ' . tabpagenr()<CR>
 " map  <C-S-Tab>   :tabprevious<CR>
 " imap <C-Tab>     <ESC>:tabnext<CR>i
 " imap <C-S-Tab>   <ESC>:tabprevious<CR>i
-nmap <C-;>    :tabnext<CR>
+nmap <C-l>    :tabnext<CR>
 nmap <C-j>    :tabprevious<CR>
-map  <C-;>    :tabnext<CR>
+map  <C-l>    :tabnext<CR>
 map  <C-j>    :tabprevious<CR>
-imap <C-;>    <ESC>:tabnext<CR>i
+imap <C-l>    <ESC>:tabnext<CR>i
 imap <C-j>    <ESC>:tabprevious<CR>i
 
 " Remove search higlight
@@ -120,7 +120,7 @@ Plug 'dense-analysis/ale'
 Plug 'tpope/vim-rails'
 call plug#end()
 
-colorscheme railscasts
+colorscheme slate
 set guifont=Iosevka:h16
 set updatetime=100    " Delay before gitgutter shows diff signs
 
