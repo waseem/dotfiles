@@ -129,6 +129,7 @@ if $COLORTERM == 'gnome-terminal'
 else
   colorscheme railscasts
 endif
+set termguicolors
 
 set updatetime=100    " Delay before gitgutter shows diff signs
 
