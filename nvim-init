@@ -121,7 +121,7 @@ Plug 'dense-analysis/ale'
 Plug 'tpope/vim-rails'
 call plug#end()
 
-colorscheme rails
+colorscheme railscasts
 set termguicolors
 set guifont=Iosevka:h16
 set updatetime=100    " Delay before gitgutter shows diff signs
