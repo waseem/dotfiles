@@ -100,7 +100,7 @@ function! CloseSomething()
     q
   endif
 endfunction
-map <C-w> :call CloseSomething()<CR>
+map <C-q> :call CloseSomething()<CR>
 
 set list listchars=tab:\➜\ ,trail:·,nbsp:-
 
