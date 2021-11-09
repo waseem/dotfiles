@@ -109,7 +109,7 @@ set wrap linebreak nolist showbreak=↪
 
 call plug#begin()
 Plug 'vim-scripts/railscasts'
-Pluf 'ajmwagar/vim-deus'
+Plug 'ajmwagar/vim-deus'
 Plug 'preservim/nerdcommenter'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'
