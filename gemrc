@@ -1,1 +1,1 @@
-gem: -V --no-ri --no-rdoc --no-document --suggestions
+gem: -V --suggestions
