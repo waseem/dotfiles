@@ -119,6 +119,13 @@ Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-rails'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+
+" CoC Extensions
+Plug 'neoclide/coc-solargraph', { 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc-tsserver', { 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc-eslint', { 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc-tslint', { 'do': 'yarn install --frozen-lockfile' }
 call plug#end()
 
 colorscheme railscasts
@@ -153,6 +160,29 @@ let $FZF_DEFAULT_COMMAND='rg --files --hidden'
 if exists('g:gnvim')
   set cursorline      " highlight current line
 endif
+
+""" CoC settings
+" go to definition of word under cursor
+nmap <silent> <leader>d :call CocActionAsync('jumpDefinition', 'tabnew')<CR>
+nmap <silent> <leader>y :call CocActionAsync('jumpTypeDefinition', 'tabnew')<CR>
+
+" go to implementation
+nmap <silent> <leader>i :call CocActionAsync('jumpImplementation', 'tabnew')<CR>
+
+" find references
+nmap <silent> <leader>r <Plug>(coc-references)
+
+" show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim', 'help'], &filetype >= 0))
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
 
 " Load files if changed by an external command https://github.com/neovim/neovim/issues/1936
 au FocusGained * :checktime

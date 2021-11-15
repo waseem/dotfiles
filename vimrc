@@ -17,6 +17,9 @@ set undodir=~/.vim/undodir
 set splitbelow
 set splitright
 
+" Give more space for displaying messages
+" set cmdheight=2
+
 filetype plugin indent on
 filetype plugin on
 filetype indent on
@@ -120,6 +123,14 @@ Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'delphinus/vim-firestore'
 Plug 'tpope/vim-rails'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+
+" CoC extensions
+Plug 'neoclide/coc-solargraph', { 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc-tsserver', { 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc-eslint', { 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc-tslint', { 'do': 'yarn install --frozen-lockfile' }
+
 "Plug 'ryanoasis/vim-devicons' "should be last
 call plug#end()
 
@@ -165,6 +176,29 @@ vmap <leader><Bar> :EasyAlign*<Bar><CR>
 " Open a Golang definition in a new tab by default using gd.
 " C-] still opens in same tab.
 "let g:godef_split=2
+
+""" CoC settings
+" go to definition of word under cursor
+nmap <silent> <leader>d :call CocActionAsync('jumpDefinition', 'tabnew')<CR>
+nmap <silent> <leader>y :call CocActionAsync('jumpTypeDefinition', 'tabnew')<CR>
+
+" go to implementation
+nmap <silent> <leader>i :call CocActionAsync('jumpImplementation', 'tabnew')<CR>
+
+" find references
+nmap <silent> <leader>r <Plug>(coc-references)
+
+" show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim', 'help'], &filetype >= 0))
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
 
 "au BufRead,BufNewFile *.iex set ft=elixir
 "au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery

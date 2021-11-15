@@ -68,4 +68,7 @@ if [ $SPIN ]; then
   for package in "${packages[@]}"; do
     install_package "$package"
   done
+
+  # For Coc-solargraph
+  gem install solargraph
 fi
