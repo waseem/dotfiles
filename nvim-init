@@ -125,7 +125,6 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'neoclide/coc-solargraph', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'neoclide/coc-tsserver', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'neoclide/coc-eslint', { 'do': 'yarn install --frozen-lockfile' }
-Plug 'neoclide/coc-tslint', { 'do': 'yarn install --frozen-lockfile' }
 call plug#end()
 
 colorscheme railscasts
