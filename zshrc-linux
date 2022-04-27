@@ -90,7 +90,7 @@ export UPDATE_ZSH_DAYS=60
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages direnv pyenv nvm heroku)
+plugins=(git colored-man-pages direnv pyenv nvm heroku globalias)
 
 # Default OMZ chruby plugin shows ruby version in prompt. I don't like that.
 [[ -f /usr/share/chruby/chruby.sh ]] && . /usr/share/chruby/chruby.sh
@@ -123,3 +123,4 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias rrsync="rsync -avzPh $*"

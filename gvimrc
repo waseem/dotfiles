@@ -6,7 +6,8 @@ set cursorline " highlight current line
 
 if has("gui_macvim")
   "set guifont=Menlo:h14
-  set guifont=Terminus\ \(TTF\):h16
+  "set guifont=Terminus\ \(TTF\):h16
+  set guifont=Terminus\ \(TTF\):h20
 else
   "set guifont=Iosevka\ 12
   "set guifont=Monospace\ Regular\ 12

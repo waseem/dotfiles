@@ -82,7 +82,7 @@ export UPDATE_ZSH_DAYS=13
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages bundler osx brew ruby)
+plugins=(git colored-man-pages bundler macos brew ruby globalias)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -114,7 +114,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
+alias rrsync="rsync -avzPh $*"
 
 # Custom plugins installed by homebrew
 #

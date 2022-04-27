@@ -147,6 +147,9 @@ set updatetime=100    " Delay before gitgutter shows diff signs
 " fzf find files
 nnoremap <C-p> :FZF<CR>
 
+" use ripgrep for fzf https://github.com/junegunn/fzf.vim/issues/121#issuecomment-546360911
+let $FZF_DEFAULT_COMMAND='rg --files --hidden'
+
 " Keybindings for ALE eslint-navigation. Always start from top of the file
 " <leader>p is already occupied by copy pasting
 nnoremap <leader>n :lnext<CR>
@@ -163,9 +166,6 @@ let g:airline#extensions#tabline#show_buffers = 0
 
 " Align comment character to the left
 let g:NERDDefaultAlign = 'left'
-
-" use ripgrep for fzf https://github.com/junegunn/fzf.vim/issues/121#issuecomment-546360911
-let $FZF_DEFAULT_COMMAND='rg --files --hidden'
 
 " Do not open nerdtree on Gvim open
 let g:nerdtree_tabs_open_on_gui_startup = 0
