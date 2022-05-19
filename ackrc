@@ -4,3 +4,4 @@
 --ignore-directory=coverage
 --ignore-directory=doc
 --ignore-directory=tmp/cache
+--ignore-directory=sorbet

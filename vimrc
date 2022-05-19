@@ -123,13 +123,13 @@ Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'delphinus/vim-firestore'
 Plug 'tpope/vim-rails'
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+" Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 " CoC extensions
-Plug 'neoclide/coc-solargraph', { 'do': 'yarn install --frozen-lockfile' }
-Plug 'neoclide/coc-tsserver', { 'do': 'yarn install --frozen-lockfile' }
-Plug 'neoclide/coc-eslint', { 'do': 'yarn install --frozen-lockfile' }
-Plug 'neoclide/coc-tslint', { 'do': 'yarn install --frozen-lockfile' }
+" Plug 'neoclide/coc-solargraph', { 'do': 'yarn install --frozen-lockfile' }
+" Plug 'neoclide/coc-tsserver', { 'do': 'yarn install --frozen-lockfile' }
+" Plug 'neoclide/coc-eslint', { 'do': 'yarn install --frozen-lockfile' }
+" Plug 'neoclide/coc-tslint', { 'do': 'yarn install --frozen-lockfile' }
 
 "Plug 'ryanoasis/vim-devicons' "should be last
 call plug#end()

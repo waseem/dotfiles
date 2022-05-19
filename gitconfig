@@ -1,7 +1,7 @@
 [user]
 	name = Waseem Ahmad
 	email = waseem.ahmad@shopify.com
-	signingkey = 55F3EEA5E552FA649F636C5BF085D21E81639270
+	signingkey = 31EC8CF61BBCD138
 [core]
 	excludesfile = ~/.gitignore
 	editor = vim
@@ -37,8 +37,6 @@
 	who = false
 [pull]
 	rebase = true
-[gpg]
-	program = /nix/var/nix/gcroots/dev-profiles/dev-support-dev-profile/bin/gpg-auto-pin
 [commit]
 	gpgSign = true
 [include]
