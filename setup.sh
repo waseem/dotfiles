@@ -12,10 +12,8 @@ declare -a packages=(
 )
 
 declare -a dotfiles=(
-  "gemrc"
   "ackrc"
   "gitignore"
-  "rspec"
 )
 
 install_package() {
@@ -68,7 +66,4 @@ if [ $SPIN ]; then
   for package in "${packages[@]}"; do
     install_package "$package"
   done
-
-  # For Coc-solargraph
-  gem install solargraph
 fi
