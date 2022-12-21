@@ -60,7 +60,6 @@ if [ $SPIN ]; then
   git config --global --unset-all credential.helper
   git config --global --unset-all gpg.program
   git config --global --unset-all commit.gpgSign
-  setup_nvim
   setup_ohmyzsh
 
   for package in "${packages[@]}"; do
