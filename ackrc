@@ -5,3 +5,6 @@
 --ignore-directory=doc
 --ignore-directory=tmp/cache
 --ignore-directory=sorbet
+--ignore-directory=log
+--ignore-directory=public/bundles
+--ignore-directory=.dev
