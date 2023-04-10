@@ -18,6 +18,7 @@
   track  = checkout --track
 	ahead-by = rev-list --count main..HEAD
 	ahead-by-master = rev-list --count master..HEAD
+	p = pull origin HEAD
 [color]
 	branch = auto
 	diff = auto
