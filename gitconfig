@@ -1,7 +1,7 @@
 [user]
 	name = Waseem Ahmad
 	email = waseem.ahmad@shopify.com
-	signingkey = 31EC8CF61BBCD138
+	# signingkey = 31EC8CF61BBCD138
 [core]
 	excludesfile = ~/.gitignore
 	editor = vim
@@ -10,15 +10,16 @@
 [alias]
 	ci = commit -v
 	st = status --short
-	co = checkout
-  df = difftool -y --tool=gvimdiff -U99999
-  who = shortlog -s -n
-  r   = rebase
-  ri  = rebase -i
-  track  = checkout --track
+    co = checkout
+    df = difftool -y --tool=gvimdiff -U99999
+    who = shortlog -s -n
+    r = rebase
+    ri = rebase -i
+    track  = checkout --track
 	ahead-by = rev-list --count main..HEAD
 	ahead-by-master = rev-list --count master..HEAD
-	p = pull origin HEAD
+	ll = pull origin HEAD
+	sh = push origin HEAD
 [color]
 	branch = auto
 	diff = auto

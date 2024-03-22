@@ -1,0 +1,192 @@
+{
+  "editor.fontFamily": "'Terminus (TTF)', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 16,
+  "editor.lineHeight": 18,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "all",
+  "search.smartCase": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.formatOnSave": true,
+  "[ruby]": {
+    "files.trimTrailingWhitespace": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "Shopify.ruby-lsp",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnType": true,
+    "editor.semanticHighlighting.enabled": true,
+    "files.trimFinalNewlines": true
+  },
+  "workbench.colorTheme": "GitHub Dark Dimmed",
+  "editor.fontWeight": "normal",
+  "workbench.iconTheme": "material-icon-theme",
+  "byesig.fold": false,
+  "byesig.enabled": true,
+  "byesig.opacity": 0.5,
+  "byesig.showIcon": false,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "vim.statusBarColorControl": true,
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#005f87",
+    "statusBar.noFolderBackground": "#005f87",
+    "statusBar.debuggingBackground": "#005f87",
+    "statusBar.foreground": "#ffffff",
+    "statusBar.debuggingForeground": "#ffffff"
+  },
+  "vim.useSystemClipboard": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        ";"
+      ],
+      "after": [
+        "<ESC>"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<C-n>"
+      ],
+      "commands": [
+        ":nohl"
+      ]
+    },
+    {
+      "before": [
+        "<Space>"
+      ],
+      "commands": [
+        "cursorPageDown"
+      ]
+    },
+    {
+      "before": [
+        "<Backspace>"
+      ],
+      "commands": [
+        "cursorPageUp"
+      ]
+    },
+    {
+      "before": [
+        "<C-h>"
+      ],
+      "commands": [
+        "workbench.action.moveEditorLeftInGroup"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        ";"
+      ],
+      "after": [
+        "<Right>"
+      ]
+    },
+    {
+      "before": [
+        "l"
+      ],
+      "after": [
+        "<Up>"
+      ]
+    },
+    {
+      "before": [
+        "k"
+      ],
+      "after": [
+        "<Down>"
+      ]
+    },
+    {
+      "before": [
+        "j"
+      ],
+      "after": [
+        "<Left>"
+      ]
+    },
+    {
+      "before": [
+        "h"
+      ],
+      "after": [
+        "b"
+      ]
+    }
+  ],
+  "vim.hlsearch": true,
+  "git.mergeEditor": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+  "editor.inlineSuggest.enabled": true,
+  "editor.rulers": [
+    120
+  ],
+  "workbench.startupEditor": "none",
+  "search.showLineNumbers": true,
+  "rubyLsp.enableExperimentalFeatures": true,
+  "rubyLsp.enabledFeatures": {
+    "codeActions": true,
+    "diagnostics": true,
+    "documentHighlights": true,
+    "documentLink": true,
+    "documentSymbols": true,
+    "foldingRanges": true,
+    "formatting": true,
+    "hover": true,
+    "inlayHint": true,
+    "onTypeFormatting": true,
+    "selectionRanges": true,
+    "semanticHighlighting": true,
+    "completion": true,
+    "codeLens": true
+  },
+  "editor.guides.bracketPairs": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false
+  },
+  "gitlens.rebaseEditor.ordering": "asc",
+  "todohighlight.defaultStyle": {
+    "isWholeLine": false
+  },
+  "explorer.fileNesting.enabled": true,
+  "remote.SSH.defaultExtensions": [
+    "eamodio.gitlens",
+    "miguel-savignano.ruby-symbols",
+    "itarato.byesig",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "graphql.vscode-graphql",
+    "ms-vscode.live-server",
+    "ms-vsliveshare.vsliveshare",
+    "unifiedjs.vscode-mdx",
+    "gusto.packwerk-vscode"
+  ],
+  "eslint.codeActionsOnSave.rules": [
+    "eslint:fix"
+  ],
+  "eslint.format.enable": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "remote.SSH.connectTimeout": 150,
+  "workbench.editorAssociations": {
+    "git-rebase-todo": "default"
+  },
+  "terminal.integrated.scrollback": 1000000,
+  "terminal.integrated.persistentSessionScrollback": 1000
+}
