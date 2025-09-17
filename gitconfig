@@ -1,6 +1,6 @@
 [user]
 	name = Waseem Ahmad
-	email = waseem.ahmad@shopify.com
+	email = talk.to.waseem@gmail.com
 	# signingkey = 31EC8CF61BBCD138
 [core]
 	excludesfile = ~/.gitignore
@@ -39,7 +39,7 @@
 	who = false
 [pull]
 	rebase = true
-[commit]
-	gpgSign = true
 [include]
 	path = /Users/waseem/.config/dev/gitconfig
+[init]
+	defaultBranch = main
