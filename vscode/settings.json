@@ -37,89 +37,48 @@
   "vim.useSystemClipboard": true,
   "vim.insertModeKeyBindings": [
     {
-      "before": [
-        "j",
-        ";"
-      ],
-      "after": [
-        "<ESC>"
-      ]
+      "before": ["j", ";"],
+      "after": ["<ESC>"]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "<C-n>"
-      ],
-      "commands": [
-        ":nohl"
-      ]
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
     },
     {
-      "before": [
-        "<Space>"
-      ],
-      "commands": [
-        "cursorPageDown"
-      ]
+      "before": ["<Space>"],
+      "commands": ["cursorPageDown"]
     },
     {
-      "before": [
-        "<Backspace>"
-      ],
-      "commands": [
-        "cursorPageUp"
-      ]
+      "before": ["<Backspace>"],
+      "commands": ["cursorPageUp"]
     },
     {
-      "before": [
-        "<C-h>"
-      ],
-      "commands": [
-        "workbench.action.moveEditorLeftInGroup"
-      ]
+      "before": ["<C-h>"],
+      "commands": ["workbench.action.moveEditorLeftInGroup"]
     }
   ],
   "vim.normalModeKeyBindings": [
     {
-      "before": [
-        ";"
-      ],
-      "after": [
-        "<Right>"
-      ]
+      "before": [";"],
+      "after": ["<Right>"]
     },
     {
-      "before": [
-        "l"
-      ],
-      "after": [
-        "<Up>"
-      ]
+      "before": ["l"],
+      "after": ["<Up>"]
     },
     {
-      "before": [
-        "k"
-      ],
-      "after": [
-        "<Down>"
-      ]
+      "before": ["k"],
+      "after": ["<Down>"]
     },
     {
-      "before": [
-        "j"
-      ],
-      "after": [
-        "<Left>"
-      ]
+      "before": ["j"],
+      "after": ["<Left>"]
     },
     {
-      "before": [
-        "h"
-      ],
-      "after": [
-        "b"
-      ]
+      "before": ["h"],
+      "after": ["b"]
     }
   ],
   "vim.hlsearch": true,
@@ -127,9 +86,7 @@
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "editor.inlineSuggest.enabled": true,
-  "editor.rulers": [
-    120
-  ],
+  "editor.rulers": [120],
   "workbench.startupEditor": "none",
   "search.showLineNumbers": true,
   "rubyLsp.enableExperimentalFeatures": true,
@@ -173,15 +130,15 @@
     "unifiedjs.vscode-mdx",
     "gusto.packwerk-vscode"
   ],
-  "eslint.codeActionsOnSave.rules": [
-    "eslint:fix"
-  ],
+  "eslint.codeActionsOnSave.rules": ["eslint:fix"],
   "eslint.format.enable": true,
   "[typescript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    // "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    // "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "remote.SSH.connectTimeout": 150,
   "workbench.editorAssociations": {
